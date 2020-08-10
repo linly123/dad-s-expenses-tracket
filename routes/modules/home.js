@@ -28,9 +28,9 @@ router.get("/", (req, res) => {
     .lean()
     .sort({ date: "desc" })
     .then((record) => {
-      const amount = record.map((item) => item.amount);
-      const reducer = (accumulator, currentValue) => accumulator + currentValue;
-      const totalAmount = amount.reduce(reducer);
+      const totalAmount = record
+        .map((item) => (typeof item.amount === "number" ? item.amount : 0))
+        .reduce((accumulator, currentValue) => accumulator + currentValue);
       return res.render("index", { record, totalAmount, categories });
     })
     .catch((error) => console.error(error));

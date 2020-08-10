@@ -7,7 +7,7 @@ const handlebars = require("handlebars");
 const routes = require("./routes");
 const { options } = require("mongoose");
 require("./config/mongoose");
-
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 //set up express-handlebars
@@ -24,6 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(routes);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("This is running on http://localhost:3000");
 });

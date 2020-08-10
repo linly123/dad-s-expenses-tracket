@@ -112,8 +112,10 @@
   padding: 30px;
 }
 
-.create-btn {
-  width: 120px;
+.create-btn,
+.advise-btn {
+  height: 50px;
+  width: 280px;
   background-color: orange;
   text-decoration: none;
   margin: 30px;
@@ -127,6 +129,7 @@
 
 .create-btn a {
   color: white;
+  font-size: 20px;
 }
 
 .delete-btn {
@@ -145,4 +148,44 @@
   width: 55%;
   height: 40px;
   margin-bottom: 40px;
+}
+
+.advise-header {
+  display: flex;
+}
+
+.advise-container {
+  width: 600px;
+  margin: 40px auto;
+}
+
+.advise-container h6 {
+  margin-right: 30px;
+}
+
+.advise-container label {
+  margin-right: 30px;
+  font-size: 25px;
+}
+
+.advise-container div {
+  margin: 40px auto;
+}
+
+.advise-container input,
+.advise-container select {
+  height: 50px;
+  width: 280px;
+  font-size: 25px;
+}
+
+.advise-container button {
+  height: 50px;
+  width: 280px;
+  margin-left: 120px;
+}
+
+.advise-btn {
+  color: white;
+  font-size: 25px;
 }

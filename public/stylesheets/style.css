@@ -113,7 +113,7 @@
 }
 
 .create-btn,
-.advise-btn {
+.form-btn {
   height: 50px;
   width: 280px;
   background-color: orange;
@@ -150,42 +150,42 @@
   margin-bottom: 40px;
 }
 
-.advise-header {
+.form-header {
   display: flex;
 }
 
-.advise-container {
+.form-container {
   width: 600px;
   margin: 40px auto;
 }
 
-.advise-container h6 {
+.form-container h6 {
   margin-right: 30px;
 }
 
-.advise-container label {
+.form-container label {
   margin-right: 30px;
   font-size: 25px;
 }
 
-.advise-container div {
+.form-container div {
   margin: 40px auto;
 }
 
-.advise-container input,
-.advise-container select {
+.form-container input,
+.form-container select {
   height: 50px;
   width: 280px;
   font-size: 25px;
 }
 
-.advise-container button {
+.form-container button {
   height: 50px;
   width: 280px;
   margin-left: 120px;
 }
 
-.advise-btn {
+.form-btn {
   color: white;
   font-size: 25px;
 }

@@ -11,7 +11,9 @@ router.get("/new", (req, res) => {
 //新增記錄
 router.post("/", (req, res) => {
   const { name, date, category, amount } = req.body;
+  const categories = ["家居物業", "交通出行", "休閒娛樂", "餐飲食品", "其他"];
   return Record.create(req.body)
+    .then(() => res.render("/", { categories }))
     .then(() => res.redirect("/"))
     .catch((error) => console.log(error));
 });
@@ -19,11 +21,10 @@ router.post("/", (req, res) => {
 //修改記錄:get
 router.get("/:id/edit", (req, res) => {
   const id = req.params.id;
-  const format = "YYYY-MM-DD";
   const categories = ["家居物業", "交通出行", "休閒娛樂", "餐飲食品", "其他"];
   return Record.findById(id)
     .lean()
-    .then((record) => res.render("edit", { record, categories, format }))
+    .then((record) => res.render("edit", { record, categories }))
     .catch((error) => console.log(error));
 });
 
